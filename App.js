@@ -1,14 +1,25 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { ApolloClient, createNetworkInterface, ApolloProvider } from 'react-apollo';
 
 export default class App extends React.Component {
+  createClient() {
+    // Initialize Apollo Client with URL to our server
+    return new ApolloClient({
+      networkInterface: createNetworkInterface({
+        uri: 'https://join-monster.herokuapp.com/graphql-relay',
+      }),
+    });
+  }
+
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
-      </View>
+      // Feed the client instance into your React component tree
+      <ApolloProvider client={this.createClient()}>
+        <View>
+          <Text>React Apollo Demo App</Text>
+        </View>
+      </ApolloProvider>
     );
   }
 }
