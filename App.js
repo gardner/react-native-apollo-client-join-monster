@@ -1,6 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { ApolloClient, createNetworkInterface, ApolloProvider } from 'react-apollo';
+import styles from './appStyles';
+import FeedWithData from './Feed';
 
 export default class App extends React.Component {
   createClient() {
@@ -16,19 +18,10 @@ export default class App extends React.Component {
     return (
       // Feed the client instance into your React component tree
       <ApolloProvider client={this.createClient()}>
-        <View>
-          <Text>React Apollo Demo App</Text>
+        <View style={styles.container}>
+          <FeedWithData />
         </View>
       </ApolloProvider>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

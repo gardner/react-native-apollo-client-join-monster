@@ -19,6 +19,7 @@
     "preset": "jest-expo"
   },
   "dependencies": {
+    "apollo-client": "^1.9.0-1",
     "expo": "^19.0.0",
     "react": "16.0.0-alpha.12",
     "react-apollo": "^1.4.8",
