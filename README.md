@@ -1,3 +1,10 @@
+To inspect the changes made after generating the react native app use the
+github compare view:
+https://github.com/gardner/react-native-apollo-client-join-monster/compare/04557d6365ff6e30fd70e6362035ff9e73381f70...master
+
+
+
+
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
 
 Below you'll find information about performing common tasks. The most recent version of this guide is available [here](https://github.com/react-community/create-react-native-app/blob/master/react-native-scripts/template/README.md).
