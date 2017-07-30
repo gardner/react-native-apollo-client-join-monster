@@ -22,6 +22,7 @@
     "expo": "^19.0.0",
     "react": "16.0.0-alpha.12",
     "react-apollo": "^1.4.8",
-    "react-native": "^0.46.1"
+    "react-native": "^0.46.1",
+    "react-native-elements": "^0.15.0"
   }
 }
